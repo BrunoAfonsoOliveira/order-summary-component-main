@@ -1,7 +1,85 @@
+:root {
+    --bg-color: hsl(225, 100%, 94%);
+    --title: hsl(223, 47%, 23%);
+    --description: hsl(224, 23%, 55%);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    height: 80%;
+    max-width: 480px;
+    width: 90%;
+}
+
+.hero-container {
+    max-height: 238px;
+    height: 40%;
+    width: 100%;
+    background: grey url(images/illustration-hero.svg) center center/cover no-repeat;
+}
+
+.title {
+    text-align: center;
+    margin: 1.5em 0 1em 0;
+    font-size: 1.8rem;
+    color: var(--title);
+}
+
+.description {
+    max-width: 280px;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    color: var(--description);
+    padding-bottom: 5%;
+}
+
+.plan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+    background-color: aqua;
+    width: 80%;
+    margin: auto;
+}
+
+.icon-plan {
+    margin-right: 5%;
+}
+
+.change-plan {
+    text-align: end;
+    align-self: center;
+    margin-left: 40%;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-plan {
+    font-size: 1em;
 }
 
 .attribution { font-size: 11px; text-align: center; }
