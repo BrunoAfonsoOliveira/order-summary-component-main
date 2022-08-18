@@ -2,6 +2,8 @@
     --bg-color: hsl(225, 100%, 94%);
     --title: hsl(223, 47%, 23%);
     --description: hsl(224, 23%, 55%);
+    --plan-bg: hsl(225, 100%, 98%);
+    --change: hsl(245, 75%, 52%);
 }
 
 * {
@@ -24,63 +26,119 @@ body {
 
 .card {
     background-color: rgb(255, 255, 255);
-    height: 80%;
-    max-width: 480px;
-    width: 90%;
+    max-width: 30rem;
+    width: 90vw;
+    border-radius: 15px;
+    box-shadow: 0 25px 10px 10px rgba(0, 0, 0, 0.050);
+    transition: transform 1s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .hero-container {
-    max-height: 238px;
-    height: 40%;
+    min-height: 15rem;
     width: 100%;
     background: grey url(images/illustration-hero.svg) center center/cover no-repeat;
+    border-radius: 15px 15px 0 0;
 }
 
 .title {
     text-align: center;
-    margin: 1.5em 0 1em 0;
-    font-size: 1.8rem;
+    padding: 1.5em 0 1em 0;
+    font-size: 1.7rem;
     color: var(--title);
 }
 
 .description {
-    max-width: 280px;
-    width: 70%;
     text-align: center;
-    margin: auto;
+    max-width: 20rem;
+    width: 80%;
+    margin: 0 auto;
     color: var(--description);
-    padding-bottom: 5%;
+    font-weight: bold;
+    line-height: 1.5rem;
 }
 
 .plan-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 5% 10%;
-    background-color: aqua;
-    width: 80%;
-    margin: auto;
+    justify-content: space-between;
+    width: 75%;
+    padding: 1.6rem 1.4rem;
+    margin: 1.6rem auto;
+    background-color: var(--plan-bg);
+    border-radius: 15px;
 }
 
-.icon-plan {
-    margin-right: 5%;
-}
-
-.change-plan {
-    text-align: end;
-    align-self: center;
-    margin-left: 40%;
-}
-
-.features-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.condition-plan {
+    flex-basis: 100%;
+    margin-left: 1.1rem;
+    line-height: 1.8rem;
 }
 
 .title-plan {
-    font-size: 1em;
+    font-size: 1rem;
+    color: var(--title);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.price-plan {
+    color: var(--description);
+    font-weight: bold;
+}
+
+.change-plan {
+    color: var(--change);
+    font-weight: bold;
+}
+
+.change-plan:hover {
+    text-decoration: none;
+    color: hsl(245, 55%, 64%);
+}
+
+.payment-btn {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    background-color: var(--change);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 15px 5px hsla(245, 75%, 52%, 0.199);
+}
+
+.payment-btn:hover {
+    background-color: hsl(245, 55%, 64%);
+}
+.cancel-box {
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.cancel {
+    color: var(--description);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    color: var(--title);
+}
+
+@media (max-width: 425px) {
+    .plan-container, .payment-btn {
+        width: 90%;
+    }
+}
+.attribution {
+     font-size: 11px; text-align: center;
+     margin-top: 2rem;
+    }
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
