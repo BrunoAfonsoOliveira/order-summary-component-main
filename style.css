@@ -22,14 +22,14 @@ body {
     align-items: center;
     justify-content: center;
     background: var(--bg-color) url(images/pattern-background-desktop.svg) center top/contain no-repeat;
+    background-size: 100% 60vmin;
 }
-
 .card {
     background-color: rgb(255, 255, 255);
     max-width: 30rem;
     width: 90vw;
     border-radius: 15px;
-    box-shadow: 0 25px 10px 10px rgba(0, 0, 0, 0.050);
+    box-shadow: 3px 3px 10px 10px rgb(0 0 0 / 5%);
     transition: transform 1s;
 }
 
@@ -144,6 +144,13 @@ body {
         width: 90%;
     }
 }
+
+@media (max-width: 300px) {
+    .plan-container {
+        flex-direction: column;
+    }
+}
+
 .attribution {
      font-size: 11px; text-align: center;
      margin-top: 2rem;
